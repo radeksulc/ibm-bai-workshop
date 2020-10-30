@@ -29,7 +29,7 @@ Two kinds of environment will be used during the hands-on labs. One is ocntainer
 1. Container-based environment<br>
 <https://bluedemos.com/TODO>
 2. On-prem environment<br>
-<https://bluedemos.com/TODO>
+<http://bluedemos.com/show/3917>
 
 ## Labs
 ### Lab 1 - Setup BAI events for BPMN, Case and ODM with Kibana dashboards
