@@ -37,7 +37,7 @@ Two kinds of environment will be used during the hands-on labs. One is ocntainer
 [Labs](labs/swat-containers-baw-odm/Readme.md)
 
 ### Lab 2 - Artificial Intelligence and Machine Learning with BAI
-[Labs](labs/bai-ai/README.md)
+[Labs](labs/ai/README.md)
 
 ## Owner
 Radek Šulc<br>
