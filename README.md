@@ -20,12 +20,12 @@ BAI is replacing Performance Data Warehouse in Business Automation Workflow. Eve
 
 The environments for the labs will remain available for couple of days after the workshop so you will be able to discover all the available labs on your own.
 
-Before attending the virtual workshop, we recommend watching this brief video at <https://www.youtube.com/watch?v=aLPi281Z8NQ>.
+Before attending the virtual workshop, we recommend watching this brief [video](https://www.youtube.com/watch?v=aLPi281Z8NQ).
 
-## Presentations
+# Presentations
 <https://ibm.box.com/TODO>
 
-## Environments
+# Environments
 Two kinds of environment will be used during the hands-on labs. One is ocntainer-based with OpenShift. Second one is on-prem with BAI installed on plain Docker with no Kubernetes cluster.
 
 1. Container-based environment<br>
@@ -33,21 +33,40 @@ Two kinds of environment will be used during the hands-on labs. One is ocntainer
 2. On-prem environment<br>
 <http://bluedemos.com/show/3917>
 
-## Labs
-### Lab 1 - Setup BAI events for BPMN, Case and ODM with Kibana dashboards
+# Labs
+## Lab 1 - Setup BAI events for BPMN, Case and ODM with Kibana dashboards
+Labs showing how to select business data propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to BAI. After that you can learn how to leverage these data for Kibana Dashboards.
 
 [Labs](labs/swat-containers-baw-odm/Readme.md)
 
-### Lab 2 - Artificial Intelligence and Machine Learning with BAI
+Duration approx. 4 hours.
+
+## Lab 3 - Artificial Intelligence and Machine Learning with BAI
+Labs showing how to use data collected by BAI to train ML models which can be used to make processes and decision logic smarter.
+
 [Labs](labs/ai/README.md)
 
-## Owner
+Duration approx. 1 hour.
+
+## Lab 4 - OpenDistro Alerts
+
+TODO
+
+Duration approx. 30 minutes.
+
+## Lab 5 - Performance Center
+
+TODO
+
+Duration approx. 1 hour.
+
+# Owner
 Radek Šulc<br>
 <radek_sulc@cz.ibm.com><br>
 Software Engineer - Digital Business Automation<br>
 Digital Technical Engagement Team - IBM EMEA<br>
 
-## Credits
+# Credits
 Paul Pacholski, Jeffrey Goodhuex, Thomas Schulze, Swapnil Agrawal, Matthias Jung, Matthias Jung, Pierre Feillet and many other IBMers.
 
 # License
