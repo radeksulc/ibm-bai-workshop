@@ -1,0 +1,1 @@
+[Lab instructions](bai-scenario.pdf)

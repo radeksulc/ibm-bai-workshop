@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "d9f2d9b0-505e-11e9-ae27-2b2c378aff4a",
+    "_type": "dashboard",
+    "_source": {
+      "title": "MA - Business Dashboard for Mortgage Application – v1.0",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":15,\"i\":\"2\"},\"id\":\"82751d00-4f97-11e9-83c0-51c954a9c2d6\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":15,\"i\":\"3\"},\"id\":\"4f19fba0-55e7-11e9-b4ec-61f9177c286f\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":15,\"w\":24,\"h\":15,\"i\":\"5\"},\"id\":\"2e070130-55ea-11e9-b4ec-61f9177c286f\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":30,\"w\":24,\"h\":15,\"i\":\"6\"},\"id\":\"4c6f82d0-55ec-11e9-b4ec-61f9177c286f\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":45,\"w\":48,\"h\":15,\"i\":\"7\"},\"id\":\"50710680-55ef-11e9-b4ec-61f9177c286f\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":24,\"y\":30,\"w\":24,\"h\":15,\"i\":\"9\"},\"id\":\"c4e45320-5624-11e9-b4ec-61f9177c286f\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":91,\"w\":24,\"h\":15,\"i\":\"10\"},\"id\":\"e95adc30-5627-11e9-b4ec-61f9177c286f\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"embeddableConfig\":{\"mapCenter\":[0.7031073524364909,-30.585937500000004],\"mapZoom\":1},\"gridData\":{\"x\":24,\"y\":91,\"w\":24,\"h\":15,\"i\":\"11\"},\"id\":\"b03449b0-562b-11e9-b4ec-61f9177c286f\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":106,\"w\":48,\"h\":11,\"i\":\"15\"},\"id\":\"d0f161d0-59df-11e9-b9e1-b1b47b8bdc4d\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"gridData\":{\"x\":0,\"y\":75,\"w\":48,\"h\":16,\"i\":\"16\"},\"version\":\"6.5.3\",\"panelIndex\":\"16\",\"type\":\"visualization\",\"id\":\"cb143310-673f-11e9-84f4-bd2ed1e2e21c\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":0,\"y\":60,\"w\":24,\"h\":15,\"i\":\"17\"},\"version\":\"6.5.3\",\"panelIndex\":\"17\",\"type\":\"visualization\",\"id\":\"2272f0f0-6755-11e9-93f0-37b183fe3729\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":24,\"y\":60,\"w\":24,\"h\":15,\"i\":\"18\"},\"version\":\"6.5.3\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"id\":\"4c2205d0-6755-11e9-93f0-37b183fe3729\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":24,\"y\":15,\"w\":24,\"h\":15,\"i\":\"19\"},\"version\":\"6.5.3\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"id\":\"e8c50140-5abb-11e9-b9e1-b1b47b8bdc4d\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  }
+]

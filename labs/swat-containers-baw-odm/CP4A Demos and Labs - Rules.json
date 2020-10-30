@@ -1,0 +1,32 @@
+{
+   "actions": [
+   {
+       "type": "remove",
+       "fields": [
+         "$['data']['MA_CustomerName']",
+		 "$['trackedFields']['customerName.string']",
+		 "$['data']['Loan_Evaluation.Loan_Evaluation.in.Applicant.name']"
+       ]
+   },
+   {
+       "type": "hash",
+       "fields": [
+         "$['data']['MA_MADate']",
+		 "$['trackedFields']['dateOfBirth.dateTime']",
+		 "$['data']['Loan_Evaluation.Loan_Evaluation.in.Applicant.age']"
+       ]
+   },
+   {
+       "type": "encrypt",
+       "params": {
+         "key": "MTIzNDU2NzgxMjM0NTY3OA==",
+         "iv": "MTIzNDU2Nzg4NzY1NDMyMQ=="
+       },
+       "fields": [
+         "$['data']['MA_PropertyAddress']",
+		 "$['trackedFields']['propertyAddress.string']",
+		 "$['data']['Loan_Evaluation.Loan_Evaluation.in.Applicant.zipCode']"
+       ]
+   }
+   ]
+}
