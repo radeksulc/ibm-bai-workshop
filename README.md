@@ -67,7 +67,7 @@ Software Engineer - Digital Business Automation<br>
 Digital Technical Engagement Team - IBM EMEA<br>
 
 # Credits
-Paul Pacholski, Jeffrey Goodhuex, Thomas Schulze, Swapnil Agrawal, Matthias Jung, Matthias Jung, Pierre Feillet and many other IBMers.
+Paul Pacholski, Jeffrey Goodhue, Thomas Schulze, Swapnil Agrawal, Matthias Jung, Matthias Jung, Pierre Feillet and many other IBMers.
 
 # License
 The notebook found in this project are licensed under the [Apache License 2.0](LICENSE).
