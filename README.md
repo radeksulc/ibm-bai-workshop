@@ -34,8 +34,10 @@ Two kinds of environment will be used during the hands-on labs. One is ocntainer
 ## Labs
 ### Lab 1 - Setup BAI events for BPMN, Case and ODM with Kibana dashboards
 
+[Labs](labs/swat-containers-baw-odm/Readme.md)
+
 ### Lab 2 - Artificial Intelligence and Machine Learning with BAI
-[BAI AI Labs](labs/bai-ai/README.md)
+[Labs](labs/bai-ai/README.md)
 
 ## Owner
 Radek Šulc<br>
