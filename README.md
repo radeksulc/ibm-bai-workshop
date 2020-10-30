@@ -1,3 +1,5 @@
+![GitHub Logo](/images/home-header.png)
+
 # IBM Business Automation Insights - Technical Workshop
 **IBM Business Automation Insights (BAI)** have been created to provide unified **Operational Intelligence** across all the components of **IBM Digital Business Automation** – Workflow, Robotic Process Automation, Business Decisions, Content and Data Capture.
 
