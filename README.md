@@ -24,6 +24,7 @@ Before attending the virtual workshop, we recommend watching this brief video at
 <https://ibm.box.com/TODO>
 
 ## Environments
+Two kinds of environment will be used during the hands-on labs. One is ocntainer-based with OpenShift. Second one is on-prem with BAI installed on plain Docker with no Kubernetes cluster.
 
 1. Container-based environment<br>
 <https://bluedemos.com/TODO>
@@ -32,7 +33,9 @@ Before attending the virtual workshop, we recommend watching this brief video at
 
 ## Labs
 ### Lab 1 - Setup BAI events for BPMN, Case and ODM with Kibana dashboards
+
 ### Lab 2 - Artificial Intelligence and Machine Learning with BAI
+[BAI AI Labs](labs/bai-ai/README.md)
 
 ## Owner
 Radek Šulc<br>
@@ -42,3 +45,9 @@ Digital Technical Engagement Team - IBM EMEA<br>
 
 ## Credits
 Paul Pacholski, Jeffrey Goodhuex, Thomas Schulze, Swapnil Agrawal, Matthias Jung, Matthias Jung, Pierre Feillet and many other IBMers.
+
+# License
+The notebook found in this project are licensed under the [Apache License 2.0](LICENSE).
+
+# Notice
+© Copyright IBM Corporation 2020.

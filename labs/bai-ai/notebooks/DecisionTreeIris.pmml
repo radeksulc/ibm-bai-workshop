@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_4" xmlns:data="http://jpmml.org/jpmml-model/InlineTable" version="4.3">
+	<Header>
+		<Application name="JPMML-SparkML" version="1.6.1"/>
+		<Timestamp>2020-10-22T19:17:05Z</Timestamp>
+	</Header>
+	<DataDictionary>
+		<DataField name="approved" optype="categorical" dataType="string">
+			<Value value="false"/>
+			<Value value="true"/>
+		</DataField>
+		<DataField name="approvedAmount" optype="continuous" dataType="integer"/>
+		<DataField name="creditScore" optype="continuous" dataType="integer"/>
+		<DataField name="estimateAmount" optype="continuous" dataType="integer"/>
+	</DataDictionary>
+	<TransformationDictionary/>
+	<MiningModel functionName="classification">
+		<MiningSchema>
+			<MiningField name="approved" usageType="target"/>
+			<MiningField name="approvedAmount"/>
+			<MiningField name="creditScore"/>
+			<MiningField name="estimateAmount"/>
+		</MiningSchema>
+		<Output>
+			<OutputField name="pmml(prediction)" optype="categorical" dataType="string" isFinalResult="false"/>
+			<OutputField name="prediction" optype="continuous" dataType="double" feature="transformedValue">
+				<MapValues outputColumn="data:output" dataType="double">
+					<FieldColumnPair field="pmml(prediction)" column="data:input"/>
+					<InlineTable>
+						<row>
+							<data:input>false</data:input>
+							<data:output>0</data:output>
+						</row>
+						<row>
+							<data:input>true</data:input>
+							<data:output>1</data:output>
+						</row>
+					</InlineTable>
+				</MapValues>
+			</OutputField>
+			<OutputField name="probability(false)" optype="continuous" dataType="double" feature="probability" value="false"/>
+			<OutputField name="probability(true)" optype="continuous" dataType="double" feature="probability" value="true"/>
+		</Output>
+		<Segmentation multipleModelMethod="average">
+			<Segment id="1">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node score="false" recordCount="3681.0">
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+							<ScoreDistribution value="false" recordCount="3503.0"/>
+							<ScoreDistribution value="true" recordCount="178.0"/>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node score="true" recordCount="29.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+								<ScoreDistribution value="false" recordCount="6.0"/>
+								<ScoreDistribution value="true" recordCount="23.0"/>
+							</Node>
+							<Node score="false" recordCount="38.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="709.0"/>
+								<ScoreDistribution value="false" recordCount="28.0"/>
+								<ScoreDistribution value="true" recordCount="10.0"/>
+							</Node>
+							<Node score="true" recordCount="21.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="8.0"/>
+								<ScoreDistribution value="true" recordCount="13.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="247.0">
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="3533.0"/>
+							<ScoreDistribution value="false" recordCount="236.0"/>
+							<ScoreDistribution value="true" recordCount="11.0"/>
+						</Node>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="3658.0"/>
+							<Node score="false" recordCount="5.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+								<ScoreDistribution value="false" recordCount="5.0"/>
+								<ScoreDistribution value="true" recordCount="0.0"/>
+							</Node>
+							<Node score="true" recordCount="3.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="0.0"/>
+								<ScoreDistribution value="true" recordCount="3.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="40.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="38.0"/>
+							<ScoreDistribution value="true" recordCount="2.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="2">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+							<Node>
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="2258.0"/>
+								<Node>
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="696.0"/>
+									<Node score="false" recordCount="1478.0">
+										<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="2239.0"/>
+										<ScoreDistribution value="false" recordCount="1415.0"/>
+										<ScoreDistribution value="true" recordCount="63.0"/>
+									</Node>
+									<Node score="false" recordCount="9.0">
+										<SimplePredicate field="creditScore" operator="lessOrEqual" value="285.0"/>
+										<ScoreDistribution value="false" recordCount="9.0"/>
+										<ScoreDistribution value="true" recordCount="0.0"/>
+									</Node>
+									<Node score="true" recordCount="5.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="1.0"/>
+										<ScoreDistribution value="true" recordCount="4.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="423.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="384.0"/>
+									<ScoreDistribution value="true" recordCount="39.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="1552.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="1491.0"/>
+								<ScoreDistribution value="true" recordCount="61.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+								<Node score="true" recordCount="11.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="972.0"/>
+									<ScoreDistribution value="false" recordCount="1.0"/>
+									<ScoreDistribution value="true" recordCount="10.0"/>
+								</Node>
+								<Node score="false" recordCount="4.0">
+									<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="114.0"/>
+									<ScoreDistribution value="false" recordCount="4.0"/>
+									<ScoreDistribution value="true" recordCount="0.0"/>
+								</Node>
+								<Node score="true" recordCount="11.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="3.0"/>
+									<ScoreDistribution value="true" recordCount="8.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="25.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="578.0"/>
+								<ScoreDistribution value="false" recordCount="17.0"/>
+								<ScoreDistribution value="true" recordCount="8.0"/>
+							</Node>
+							<Node score="true" recordCount="49.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="19.0"/>
+								<ScoreDistribution value="true" recordCount="30.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="314.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="302.0"/>
+							<ScoreDistribution value="true" recordCount="12.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="3">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="963.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="824.0"/>
+								<Node score="false" recordCount="775.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+									<ScoreDistribution value="false" recordCount="727.0"/>
+									<ScoreDistribution value="true" recordCount="48.0"/>
+								</Node>
+								<Node>
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<Node score="false" recordCount="10.0">
+										<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="114.0"/>
+										<ScoreDistribution value="false" recordCount="6.0"/>
+										<ScoreDistribution value="true" recordCount="4.0"/>
+									</Node>
+									<Node score="true" recordCount="21.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="6.0"/>
+										<ScoreDistribution value="true" recordCount="15.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="39.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="27.0"/>
+									<ScoreDistribution value="true" recordCount="12.0"/>
+								</Node>
+							</Node>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+								<Node score="false" recordCount="106.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+									<ScoreDistribution value="false" recordCount="93.0"/>
+									<ScoreDistribution value="true" recordCount="13.0"/>
+								</Node>
+								<Node score="true" recordCount="14.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="4.0"/>
+									<ScoreDistribution value="true" recordCount="10.0"/>
+								</Node>
+							</Node>
+							<Node>
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="285.0"/>
+								<Node score="false" recordCount="1.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="216.0"/>
+									<ScoreDistribution value="false" recordCount="1.0"/>
+									<ScoreDistribution value="true" recordCount="0.0"/>
+								</Node>
+								<Node score="true" recordCount="2.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="0.0"/>
+									<ScoreDistribution value="true" recordCount="2.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="10.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="10.0"/>
+								<ScoreDistribution value="true" recordCount="0.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="2890.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="2767.0"/>
+							<ScoreDistribution value="true" recordCount="123.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="4">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node score="false" recordCount="3611.0">
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+							<ScoreDistribution value="false" recordCount="3457.0"/>
+							<ScoreDistribution value="true" recordCount="154.0"/>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node score="false" recordCount="8.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="114.0"/>
+								<ScoreDistribution value="false" recordCount="8.0"/>
+								<ScoreDistribution value="true" recordCount="0.0"/>
+							</Node>
+							<Node>
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="717.0"/>
+								<Node score="true" recordCount="20.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<ScoreDistribution value="false" recordCount="8.0"/>
+									<ScoreDistribution value="true" recordCount="12.0"/>
+								</Node>
+								<Node score="false" recordCount="33.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="22.0"/>
+									<ScoreDistribution value="true" recordCount="11.0"/>
+								</Node>
+							</Node>
+							<Node score="true" recordCount="18.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="7.0"/>
+								<ScoreDistribution value="true" recordCount="11.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="318.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="308.0"/>
+							<ScoreDistribution value="true" recordCount="10.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="5">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node score="false" recordCount="3570.0">
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+							<ScoreDistribution value="false" recordCount="3419.0"/>
+							<ScoreDistribution value="true" recordCount="151.0"/>
+						</Node>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="963.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="709.0"/>
+								<Node>
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<Node score="false" recordCount="11.0">
+										<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="215.0"/>
+										<ScoreDistribution value="false" recordCount="6.0"/>
+										<ScoreDistribution value="true" recordCount="5.0"/>
+									</Node>
+									<Node score="true" recordCount="10.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="3.0"/>
+										<ScoreDistribution value="true" recordCount="7.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="30.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="21.0"/>
+									<ScoreDistribution value="true" recordCount="9.0"/>
+								</Node>
+							</Node>
+							<Node>
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+								<Node score="true" recordCount="13.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="824.0"/>
+									<ScoreDistribution value="false" recordCount="6.0"/>
+									<ScoreDistribution value="true" recordCount="7.0"/>
+								</Node>
+								<Node score="false" recordCount="3.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="2.0"/>
+									<ScoreDistribution value="true" recordCount="1.0"/>
+								</Node>
+							</Node>
+							<Node score="true" recordCount="12.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="2.0"/>
+								<ScoreDistribution value="true" recordCount="10.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="278.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="264.0"/>
+							<ScoreDistribution value="true" recordCount="14.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="6">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+							<Node score="false" recordCount="3609.0">
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="3897.0"/>
+								<ScoreDistribution value="false" recordCount="3453.0"/>
+								<ScoreDistribution value="true" recordCount="156.0"/>
+							</Node>
+							<Node>
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="410.0"/>
+								<Node score="false" recordCount="16.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="152.0"/>
+									<ScoreDistribution value="false" recordCount="16.0"/>
+									<ScoreDistribution value="true" recordCount="0.0"/>
+								</Node>
+								<Node score="true" recordCount="6.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="183.0"/>
+									<ScoreDistribution value="false" recordCount="1.0"/>
+									<ScoreDistribution value="true" recordCount="5.0"/>
+								</Node>
+								<Node score="false" recordCount="28.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="24.0"/>
+									<ScoreDistribution value="true" recordCount="4.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="65.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="62.0"/>
+								<ScoreDistribution value="true" recordCount="3.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="963.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+								<Node>
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="214.0"/>
+									<Node score="true" recordCount="5.0">
+										<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="114.0"/>
+										<ScoreDistribution value="false" recordCount="1.0"/>
+										<ScoreDistribution value="true" recordCount="4.0"/>
+									</Node>
+									<Node score="false" recordCount="9.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="5.0"/>
+										<ScoreDistribution value="true" recordCount="4.0"/>
+									</Node>
+								</Node>
+								<Node score="true" recordCount="10.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="0.0"/>
+									<ScoreDistribution value="true" recordCount="10.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="2.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="451.0"/>
+								<ScoreDistribution value="false" recordCount="2.0"/>
+								<ScoreDistribution value="true" recordCount="0.0"/>
+							</Node>
+							<Node score="true" recordCount="35.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="14.0"/>
+								<ScoreDistribution value="true" recordCount="21.0"/>
+							</Node>
+						</Node>
+						<Node score="true" recordCount="4.0">
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<ScoreDistribution value="false" recordCount="0.0"/>
+							<ScoreDistribution value="true" recordCount="4.0"/>
+						</Node>
+						<Node score="false" recordCount="203.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="196.0"/>
+							<ScoreDistribution value="true" recordCount="7.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="7">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="824.0"/>
+								<Node score="false" recordCount="850.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+									<ScoreDistribution value="false" recordCount="802.0"/>
+									<ScoreDistribution value="true" recordCount="48.0"/>
+								</Node>
+								<Node>
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<Node score="false" recordCount="6.0">
+										<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="114.0"/>
+										<ScoreDistribution value="false" recordCount="4.0"/>
+										<ScoreDistribution value="true" recordCount="2.0"/>
+									</Node>
+									<Node score="true" recordCount="17.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="2.0"/>
+										<ScoreDistribution value="true" recordCount="15.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="42.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="24.0"/>
+									<ScoreDistribution value="true" recordCount="18.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="117.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="883.0"/>
+								<ScoreDistribution value="false" recordCount="108.0"/>
+								<ScoreDistribution value="true" recordCount="9.0"/>
+							</Node>
+							<Node score="false" recordCount="4.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+								<ScoreDistribution value="false" recordCount="2.0"/>
+								<ScoreDistribution value="true" recordCount="2.0"/>
+							</Node>
+							<Node score="true" recordCount="7.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="0.0"/>
+								<ScoreDistribution value="true" recordCount="7.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="3106.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="2992.0"/>
+							<ScoreDistribution value="true" recordCount="114.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="8">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="963.0"/>
+							<Node score="false" recordCount="126.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="114.0"/>
+								<ScoreDistribution value="false" recordCount="106.0"/>
+								<ScoreDistribution value="true" recordCount="20.0"/>
+							</Node>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="578.0"/>
+								<Node score="false" recordCount="487.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+									<ScoreDistribution value="false" recordCount="472.0"/>
+									<ScoreDistribution value="true" recordCount="15.0"/>
+								</Node>
+								<Node score="true" recordCount="17.0">
+									<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="338.0"/>
+									<ScoreDistribution value="false" recordCount="4.0"/>
+									<ScoreDistribution value="true" recordCount="13.0"/>
+								</Node>
+								<Node score="false" recordCount="7.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="6.0"/>
+									<ScoreDistribution value="true" recordCount="1.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="344.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+								<ScoreDistribution value="false" recordCount="320.0"/>
+								<ScoreDistribution value="true" recordCount="24.0"/>
+							</Node>
+							<Node score="false" recordCount="20.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="824.0"/>
+								<ScoreDistribution value="false" recordCount="11.0"/>
+								<ScoreDistribution value="true" recordCount="9.0"/>
+							</Node>
+							<Node score="true" recordCount="11.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="2.0"/>
+								<ScoreDistribution value="true" recordCount="9.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="2919.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="2797.0"/>
+							<ScoreDistribution value="true" recordCount="122.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="9">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node score="false" recordCount="3545.0">
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+							<ScoreDistribution value="false" recordCount="3357.0"/>
+							<ScoreDistribution value="true" recordCount="188.0"/>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="709.0"/>
+								<Node>
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<Node score="false" recordCount="15.0">
+										<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="214.0"/>
+										<ScoreDistribution value="false" recordCount="8.0"/>
+										<ScoreDistribution value="true" recordCount="7.0"/>
+									</Node>
+									<Node score="true" recordCount="14.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="2.0"/>
+										<ScoreDistribution value="true" recordCount="12.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="38.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="22.0"/>
+									<ScoreDistribution value="true" recordCount="16.0"/>
+								</Node>
+							</Node>
+							<Node score="true" recordCount="18.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="4.0"/>
+								<ScoreDistribution value="true" recordCount="14.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="325.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="304.0"/>
+							<ScoreDistribution value="true" recordCount="21.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="10">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="883.0"/>
+							<Node score="false" recordCount="3423.0">
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="3897.0"/>
+								<ScoreDistribution value="false" recordCount="3271.0"/>
+								<ScoreDistribution value="true" recordCount="152.0"/>
+							</Node>
+							<Node score="false" recordCount="29.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="3866.0"/>
+								<ScoreDistribution value="false" recordCount="29.0"/>
+								<ScoreDistribution value="true" recordCount="0.0"/>
+							</Node>
+							<Node score="false" recordCount="103.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="848.0"/>
+								<ScoreDistribution value="false" recordCount="90.0"/>
+								<ScoreDistribution value="true" recordCount="13.0"/>
+							</Node>
+							<Node score="true" recordCount="5.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="2.0"/>
+								<ScoreDistribution value="true" recordCount="3.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="963.0"/>
+							<Node score="false" recordCount="35.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+								<ScoreDistribution value="false" recordCount="33.0"/>
+								<ScoreDistribution value="true" recordCount="2.0"/>
+							</Node>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+								<Node score="false" recordCount="23.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="214.0"/>
+									<ScoreDistribution value="false" recordCount="12.0"/>
+									<ScoreDistribution value="true" recordCount="11.0"/>
+								</Node>
+								<Node score="true" recordCount="3.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="1.0"/>
+									<ScoreDistribution value="true" recordCount="2.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="56.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="33.0"/>
+								<ScoreDistribution value="true" recordCount="23.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="1605.0"/>
+							<Node score="true" recordCount="1.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+								<ScoreDistribution value="false" recordCount="0.0"/>
+								<ScoreDistribution value="true" recordCount="1.0"/>
+							</Node>
+							<Node score="false" recordCount="88.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="86.0"/>
+								<ScoreDistribution value="true" recordCount="2.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="1714.0"/>
+							<Node score="true" recordCount="8.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+								<ScoreDistribution value="false" recordCount="3.0"/>
+								<ScoreDistribution value="true" recordCount="5.0"/>
+							</Node>
+							<Node score="false" recordCount="10.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="9.0"/>
+								<ScoreDistribution value="true" recordCount="1.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="290.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="266.0"/>
+							<ScoreDistribution value="true" recordCount="24.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="11">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="3751.0"/>
+								<Node>
+									<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="114.0"/>
+									<Node>
+										<SimplePredicate field="creditScore" operator="lessOrEqual" value="479.0"/>
+										<Node score="false" recordCount="48.0">
+											<SimplePredicate field="creditScore" operator="lessOrEqual" value="410.0"/>
+											<ScoreDistribution value="false" recordCount="43.0"/>
+											<ScoreDistribution value="true" recordCount="5.0"/>
+										</Node>
+										<Node score="true" recordCount="11.0">
+											<True/>
+											<ScoreDistribution value="false" recordCount="5.0"/>
+											<ScoreDistribution value="true" recordCount="6.0"/>
+										</Node>
+									</Node>
+									<Node score="false" recordCount="49.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="49.0"/>
+										<ScoreDistribution value="true" recordCount="0.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="3340.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="3210.0"/>
+									<ScoreDistribution value="true" recordCount="130.0"/>
+								</Node>
+							</Node>
+							<Node>
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="696.0"/>
+								<Node>
+									<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="3785.0"/>
+									<Node score="false" recordCount="11.0">
+										<SimplePredicate field="creditScore" operator="lessOrEqual" value="216.0"/>
+										<ScoreDistribution value="false" recordCount="9.0"/>
+										<ScoreDistribution value="true" recordCount="2.0"/>
+									</Node>
+									<Node score="true" recordCount="10.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="4.0"/>
+										<ScoreDistribution value="true" recordCount="6.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="129.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="119.0"/>
+									<ScoreDistribution value="true" recordCount="10.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="67.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="66.0"/>
+								<ScoreDistribution value="true" recordCount="1.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="963.0"/>
+							<Node score="true" recordCount="32.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+								<ScoreDistribution value="false" recordCount="10.0"/>
+								<ScoreDistribution value="true" recordCount="22.0"/>
+							</Node>
+							<Node score="false" recordCount="7.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="451.0"/>
+								<ScoreDistribution value="false" recordCount="7.0"/>
+								<ScoreDistribution value="true" recordCount="0.0"/>
+							</Node>
+							<Node score="false" recordCount="24.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+								<ScoreDistribution value="false" recordCount="14.0"/>
+								<ScoreDistribution value="true" recordCount="10.0"/>
+							</Node>
+							<Node score="true" recordCount="32.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="12.0"/>
+								<ScoreDistribution value="true" recordCount="20.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="301.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="282.0"/>
+							<ScoreDistribution value="true" recordCount="19.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="12">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="1220.0"/>
+							<Node>
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+								<Node score="false" recordCount="1107.0">
+									<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="1231.0"/>
+									<ScoreDistribution value="false" recordCount="1063.0"/>
+									<ScoreDistribution value="true" recordCount="44.0"/>
+								</Node>
+								<Node score="true" recordCount="5.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="57.0"/>
+									<ScoreDistribution value="false" recordCount="2.0"/>
+									<ScoreDistribution value="true" recordCount="3.0"/>
+								</Node>
+								<Node score="false" recordCount="8.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="8.0"/>
+									<ScoreDistribution value="true" recordCount="0.0"/>
+								</Node>
+							</Node>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+								<Node>
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<Node score="false" recordCount="13.0">
+										<SimplePredicate field="creditScore" operator="lessOrEqual" value="972.0"/>
+										<ScoreDistribution value="false" recordCount="7.0"/>
+										<ScoreDistribution value="true" recordCount="6.0"/>
+									</Node>
+									<Node score="true" recordCount="13.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="2.0"/>
+										<ScoreDistribution value="true" recordCount="11.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="8.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="451.0"/>
+									<ScoreDistribution value="false" recordCount="7.0"/>
+									<ScoreDistribution value="true" recordCount="1.0"/>
+								</Node>
+								<Node score="true" recordCount="49.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="23.0"/>
+									<ScoreDistribution value="true" recordCount="26.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="20.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="18.0"/>
+								<ScoreDistribution value="true" recordCount="2.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="588.0">
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="1867.0"/>
+							<ScoreDistribution value="false" recordCount="580.0"/>
+							<ScoreDistribution value="true" recordCount="8.0"/>
+						</Node>
+						<Node score="false" recordCount="367.0">
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="2258.0"/>
+							<ScoreDistribution value="false" recordCount="335.0"/>
+							<ScoreDistribution value="true" recordCount="32.0"/>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="2239.0"/>
+							<Node score="false" recordCount="22.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="848.0"/>
+								<ScoreDistribution value="false" recordCount="22.0"/>
+								<ScoreDistribution value="true" recordCount="0.0"/>
+							</Node>
+							<Node score="true" recordCount="4.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="1.0"/>
+								<ScoreDistribution value="true" recordCount="3.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="1707.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="1652.0"/>
+							<ScoreDistribution value="true" recordCount="55.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="13">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+							<Node score="false" recordCount="2888.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="729.0"/>
+								<ScoreDistribution value="false" recordCount="2763.0"/>
+								<ScoreDistribution value="true" recordCount="125.0"/>
+							</Node>
+							<Node>
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="2907.0"/>
+								<Node>
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="757.0"/>
+									<Node score="false" recordCount="74.0">
+										<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="2387.0"/>
+										<ScoreDistribution value="false" recordCount="67.0"/>
+										<ScoreDistribution value="true" recordCount="7.0"/>
+									</Node>
+									<Node score="true" recordCount="13.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="5.0"/>
+										<ScoreDistribution value="true" recordCount="8.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="512.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="473.0"/>
+									<ScoreDistribution value="true" recordCount="39.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="282.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="276.0"/>
+								<ScoreDistribution value="true" recordCount="6.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node score="false" recordCount="4.0">
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="114.0"/>
+								<ScoreDistribution value="false" recordCount="4.0"/>
+								<ScoreDistribution value="true" recordCount="0.0"/>
+							</Node>
+							<Node>
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="453.0"/>
+								<Node score="true" recordCount="24.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<ScoreDistribution value="false" recordCount="8.0"/>
+									<ScoreDistribution value="true" recordCount="16.0"/>
+								</Node>
+								<Node score="false" recordCount="9.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="8.0"/>
+									<ScoreDistribution value="true" recordCount="1.0"/>
+								</Node>
+							</Node>
+							<Node score="true" recordCount="31.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="8.0"/>
+								<ScoreDistribution value="true" recordCount="23.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="206.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="192.0"/>
+							<ScoreDistribution value="true" recordCount="14.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="14">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node score="false" recordCount="3653.0">
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+							<ScoreDistribution value="false" recordCount="3509.0"/>
+							<ScoreDistribution value="true" recordCount="144.0"/>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="709.0"/>
+								<Node score="false" recordCount="6.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="114.0"/>
+									<ScoreDistribution value="false" recordCount="6.0"/>
+									<ScoreDistribution value="true" recordCount="0.0"/>
+								</Node>
+								<Node score="true" recordCount="9.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<ScoreDistribution value="false" recordCount="3.0"/>
+									<ScoreDistribution value="true" recordCount="6.0"/>
+								</Node>
+								<Node score="false" recordCount="24.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="17.0"/>
+									<ScoreDistribution value="true" recordCount="7.0"/>
+								</Node>
+							</Node>
+							<Node>
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+								<Node score="false" recordCount="7.0">
+									<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="836.0"/>
+									<ScoreDistribution value="false" recordCount="4.0"/>
+									<ScoreDistribution value="true" recordCount="3.0"/>
+								</Node>
+								<Node score="true" recordCount="4.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="1.0"/>
+									<ScoreDistribution value="true" recordCount="3.0"/>
+								</Node>
+							</Node>
+							<Node score="true" recordCount="9.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="1.0"/>
+								<ScoreDistribution value="true" recordCount="8.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="317.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="303.0"/>
+							<ScoreDistribution value="true" recordCount="14.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="15">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="963.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="824.0"/>
+								<Node>
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="578.0"/>
+									<Node score="false" recordCount="584.0">
+										<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+										<ScoreDistribution value="false" recordCount="551.0"/>
+										<ScoreDistribution value="true" recordCount="33.0"/>
+									</Node>
+									<Node score="true" recordCount="39.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="15.0"/>
+										<ScoreDistribution value="true" recordCount="24.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="245.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+									<ScoreDistribution value="false" recordCount="225.0"/>
+									<ScoreDistribution value="true" recordCount="20.0"/>
+								</Node>
+								<Node score="false" recordCount="17.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="709.0"/>
+									<ScoreDistribution value="false" recordCount="10.0"/>
+									<ScoreDistribution value="true" recordCount="7.0"/>
+								</Node>
+								<Node score="true" recordCount="6.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="0.0"/>
+									<ScoreDistribution value="true" recordCount="6.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="109.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+								<ScoreDistribution value="false" recordCount="96.0"/>
+								<ScoreDistribution value="true" recordCount="13.0"/>
+							</Node>
+							<Node score="true" recordCount="10.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="1.0"/>
+								<ScoreDistribution value="true" recordCount="9.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="1867.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+								<Node score="false" recordCount="5.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="637.0"/>
+									<ScoreDistribution value="false" recordCount="5.0"/>
+									<ScoreDistribution value="true" recordCount="0.0"/>
+								</Node>
+								<Node score="true" recordCount="1.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="0.0"/>
+									<ScoreDistribution value="true" recordCount="1.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="867.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="845.0"/>
+								<ScoreDistribution value="true" recordCount="22.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="2179.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="2072.0"/>
+							<ScoreDistribution value="true" recordCount="107.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="16">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="214.0"/>
+								<Node>
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="541.0"/>
+									<Node score="false" recordCount="63.0">
+										<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="114.0"/>
+										<ScoreDistribution value="false" recordCount="53.0"/>
+										<ScoreDistribution value="true" recordCount="10.0"/>
+									</Node>
+									<Node score="false" recordCount="51.0">
+										<SimplePredicate field="creditScore" operator="lessOrEqual" value="515.0"/>
+										<ScoreDistribution value="false" recordCount="46.0"/>
+										<ScoreDistribution value="true" recordCount="5.0"/>
+									</Node>
+									<Node score="true" recordCount="7.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="3.0"/>
+										<ScoreDistribution value="true" recordCount="4.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="97.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="95.0"/>
+									<ScoreDistribution value="true" recordCount="2.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="3505.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="3368.0"/>
+								<ScoreDistribution value="true" recordCount="137.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="824.0"/>
+								<Node>
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<Node score="false" recordCount="5.0">
+										<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="114.0"/>
+										<ScoreDistribution value="false" recordCount="3.0"/>
+										<ScoreDistribution value="true" recordCount="2.0"/>
+									</Node>
+									<Node score="true" recordCount="18.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="5.0"/>
+										<ScoreDistribution value="true" recordCount="13.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="28.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+									<ScoreDistribution value="false" recordCount="20.0"/>
+									<ScoreDistribution value="true" recordCount="8.0"/>
+								</Node>
+								<Node score="true" recordCount="21.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="10.0"/>
+									<ScoreDistribution value="true" recordCount="11.0"/>
+								</Node>
+							</Node>
+							<Node score="true" recordCount="10.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="2.0"/>
+								<ScoreDistribution value="true" recordCount="8.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="284.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="274.0"/>
+							<ScoreDistribution value="true" recordCount="10.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="17">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node score="false" recordCount="892.0">
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+								<ScoreDistribution value="false" recordCount="843.0"/>
+								<ScoreDistribution value="true" recordCount="49.0"/>
+							</Node>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+								<Node score="false" recordCount="10.0">
+									<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="114.0"/>
+									<ScoreDistribution value="false" recordCount="8.0"/>
+									<ScoreDistribution value="true" recordCount="2.0"/>
+								</Node>
+								<Node score="true" recordCount="17.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="4.0"/>
+									<ScoreDistribution value="true" recordCount="13.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="37.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="709.0"/>
+								<ScoreDistribution value="false" recordCount="29.0"/>
+								<ScoreDistribution value="true" recordCount="8.0"/>
+							</Node>
+							<Node score="true" recordCount="12.0">
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="836.0"/>
+								<ScoreDistribution value="false" recordCount="4.0"/>
+								<ScoreDistribution value="true" recordCount="8.0"/>
+							</Node>
+							<Node score="false" recordCount="17.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="11.0"/>
+								<ScoreDistribution value="true" recordCount="6.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="2970.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="2873.0"/>
+							<ScoreDistribution value="true" recordCount="97.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="18">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node score="false" recordCount="3631.0">
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+							<ScoreDistribution value="false" recordCount="3476.0"/>
+							<ScoreDistribution value="true" recordCount="155.0"/>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node>
+								<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+								<Node score="false" recordCount="11.0">
+									<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="582.0"/>
+									<ScoreDistribution value="false" recordCount="10.0"/>
+									<ScoreDistribution value="true" recordCount="1.0"/>
+								</Node>
+								<Node score="true" recordCount="6.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="709.0"/>
+									<ScoreDistribution value="false" recordCount="2.0"/>
+									<ScoreDistribution value="true" recordCount="4.0"/>
+								</Node>
+								<Node score="false" recordCount="9.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="5.0"/>
+									<ScoreDistribution value="true" recordCount="4.0"/>
+								</Node>
+							</Node>
+							<Node>
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="717.0"/>
+								<Node score="true" recordCount="25.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<ScoreDistribution value="false" recordCount="9.0"/>
+									<ScoreDistribution value="true" recordCount="16.0"/>
+								</Node>
+								<Node score="false" recordCount="10.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="7.0"/>
+									<ScoreDistribution value="true" recordCount="3.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="2.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="824.0"/>
+								<ScoreDistribution value="false" recordCount="1.0"/>
+								<ScoreDistribution value="true" recordCount="1.0"/>
+							</Node>
+							<Node score="true" recordCount="13.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="2.0"/>
+								<ScoreDistribution value="true" recordCount="11.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="945.0"/>
+							<Node score="false" recordCount="75.0">
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="3658.0"/>
+								<ScoreDistribution value="false" recordCount="69.0"/>
+								<ScoreDistribution value="true" recordCount="6.0"/>
+							</Node>
+							<Node score="true" recordCount="7.0">
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="3785.0"/>
+								<ScoreDistribution value="false" recordCount="3.0"/>
+								<ScoreDistribution value="true" recordCount="4.0"/>
+							</Node>
+							<Node score="false" recordCount="5.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="5.0"/>
+								<ScoreDistribution value="true" recordCount="0.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="189.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="184.0"/>
+							<ScoreDistribution value="true" recordCount="5.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="19">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node>
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="915.0"/>
+							<Node>
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="2539.0"/>
+								<Node score="false" recordCount="2068.0">
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="2239.0"/>
+									<ScoreDistribution value="false" recordCount="1956.0"/>
+									<ScoreDistribution value="true" recordCount="112.0"/>
+								</Node>
+								<Node>
+									<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="2258.0"/>
+									<Node score="false" recordCount="8.0">
+										<SimplePredicate field="creditScore" operator="lessOrEqual" value="348.0"/>
+										<ScoreDistribution value="false" recordCount="8.0"/>
+										<ScoreDistribution value="true" recordCount="0.0"/>
+									</Node>
+									<Node score="true" recordCount="14.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="6.0"/>
+										<ScoreDistribution value="true" recordCount="8.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="210.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="196.0"/>
+									<ScoreDistribution value="true" recordCount="14.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="1320.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="1274.0"/>
+								<ScoreDistribution value="true" recordCount="46.0"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="963.0"/>
+							<Node>
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="717.0"/>
+								<Node>
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="333.0"/>
+									<Node score="false" recordCount="18.0">
+										<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="214.0"/>
+										<ScoreDistribution value="false" recordCount="11.0"/>
+										<ScoreDistribution value="true" recordCount="7.0"/>
+									</Node>
+									<Node score="true" recordCount="4.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="0.0"/>
+										<ScoreDistribution value="true" recordCount="4.0"/>
+									</Node>
+								</Node>
+								<Node score="false" recordCount="37.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="27.0"/>
+									<ScoreDistribution value="true" recordCount="10.0"/>
+								</Node>
+							</Node>
+							<Node>
+								<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="836.0"/>
+								<Node score="false" recordCount="5.0">
+									<SimplePredicate field="creditScore" operator="lessOrEqual" value="972.0"/>
+									<ScoreDistribution value="false" recordCount="3.0"/>
+									<ScoreDistribution value="true" recordCount="2.0"/>
+								</Node>
+								<Node score="true" recordCount="2.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="0.0"/>
+									<ScoreDistribution value="true" recordCount="2.0"/>
+								</Node>
+							</Node>
+							<Node score="true" recordCount="13.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="4.0"/>
+								<ScoreDistribution value="true" recordCount="9.0"/>
+							</Node>
+						</Node>
+						<Node score="true" recordCount="2.0">
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<ScoreDistribution value="false" recordCount="0.0"/>
+							<ScoreDistribution value="true" recordCount="2.0"/>
+						</Node>
+						<Node score="false" recordCount="266.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="256.0"/>
+							<ScoreDistribution value="true" recordCount="10.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="20">
+				<True/>
+				<TreeModel functionName="classification" missingValueStrategy="nullPrediction">
+					<MiningSchema>
+						<MiningField name="approvedAmount"/>
+						<MiningField name="creditScore"/>
+						<MiningField name="estimateAmount"/>
+					</MiningSchema>
+					<Node>
+						<True/>
+						<Node score="false" recordCount="3831.0">
+							<SimplePredicate field="creditScore" operator="lessOrEqual" value="972.0"/>
+							<ScoreDistribution value="false" recordCount="3642.0"/>
+							<ScoreDistribution value="true" recordCount="189.0"/>
+						</Node>
+						<Node>
+							<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="953.0"/>
+							<Node>
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="578.0"/>
+								<Node>
+									<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="451.0"/>
+									<Node score="true" recordCount="18.0">
+										<SimplePredicate field="estimateAmount" operator="lessOrEqual" value="338.0"/>
+										<ScoreDistribution value="false" recordCount="3.0"/>
+										<ScoreDistribution value="true" recordCount="15.0"/>
+									</Node>
+									<Node score="false" recordCount="1.0">
+										<True/>
+										<ScoreDistribution value="false" recordCount="1.0"/>
+										<ScoreDistribution value="true" recordCount="0.0"/>
+									</Node>
+								</Node>
+								<Node score="true" recordCount="6.0">
+									<True/>
+									<ScoreDistribution value="false" recordCount="0.0"/>
+									<ScoreDistribution value="true" recordCount="6.0"/>
+								</Node>
+							</Node>
+							<Node score="false" recordCount="6.0">
+								<SimplePredicate field="approvedAmount" operator="lessOrEqual" value="709.0"/>
+								<ScoreDistribution value="false" recordCount="5.0"/>
+								<ScoreDistribution value="true" recordCount="1.0"/>
+							</Node>
+							<Node score="true" recordCount="12.0">
+								<True/>
+								<ScoreDistribution value="false" recordCount="2.0"/>
+								<ScoreDistribution value="true" recordCount="10.0"/>
+							</Node>
+						</Node>
+						<Node score="false" recordCount="97.0">
+							<True/>
+							<ScoreDistribution value="false" recordCount="93.0"/>
+							<ScoreDistribution value="true" recordCount="4.0"/>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+		</Segmentation>
+	</MiningModel>
+</PMML>

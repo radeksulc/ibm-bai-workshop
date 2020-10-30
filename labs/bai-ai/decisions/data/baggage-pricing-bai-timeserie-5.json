@@ -1,0 +1,245 @@
+{
+  "_index": "odm-timeseries-idx-ibm-bai-2019.11.18-000001",
+  "_type": "odm-timeseries",
+  "_id": "225a9c7b-70a7-458e-ba85-1e2fffaa141d0",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "version": "1.0.1",
+    "id": "225a9c7b-70a7-458e-ba85-1e2fffaa141d0",
+    "timestamp": "2019-11-27T16:39:21.626+01:00",
+    "type": "EXECUTION_SUCCESS",
+    "odmType": "ruleset",
+    "rulesetPath": "/Baggage_Pricing_RuleApp/1.0/Baggage_Pricing/1.1",
+    "duration": 3,
+    "trace.task.names": [
+      "odm.Baggage Pricing Ruleflow",
+      "odm.Baggage Pricing Ruleflow>DecisionModelTask"
+    ],
+    "trace.task.durations": [
+      2,
+      2
+    ],
+    "trace.rule.names": [
+      "Weight Allowance/Weight allowance according to status",
+      "Weight Allowance/Print",
+      "Total Weight/Determine total weight",
+      "Extra bags/Determine number of extra bags",
+      "Extra bags/Print",
+      "Extra Weight/Determine extra weight",
+      "Extra Weight Fees/Price vs weight & status",
+      "Extra Bag Fees/Zero bags",
+      "Extra Bag Fees/Print",
+      "Fees/Build results"
+    ]
+  },
+  "fields": {
+    "timestamp": [
+      "2019-11-27T15:39:21.626Z"
+    ]
+  },
+  "highlight": {
+    "rulesetPath": [
+      "@kibana-highlighted-field@/Baggage_Pricing_RuleApp/1.0/Baggage_Pricing/1.1@/kibana-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1574869161626
+  ]
+}
+{
+  "_index": "odm-timeseries-idx-ibm-bai-2019.11.18-000001",
+  "_type": "odm-timeseries",
+  "_id": "cc21ce6a-ba33-478d-bfab-7987ff70cf0c0",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "version": "1.0.1",
+    "id": "cc21ce6a-ba33-478d-bfab-7987ff70cf0c0",
+    "timestamp": "2019-11-27T16:39:12.107+01:00",
+    "type": "EXECUTION_SUCCESS",
+    "odmType": "ruleset",
+    "rulesetPath": "/Baggage_Pricing_RuleApp/1.0/Baggage_Pricing/1.1",
+    "duration": 2,
+    "trace.task.names": [
+      "odm.Baggage Pricing Ruleflow",
+      "odm.Baggage Pricing Ruleflow>DecisionModelTask"
+    ],
+    "trace.task.durations": [
+      2,
+      2
+    ],
+    "trace.rule.names": [
+      "Weight Allowance/Weight allowance according to status",
+      "Weight Allowance/Print",
+      "Total Weight/Determine total weight",
+      "Extra bags/Determine number of extra bags",
+      "Extra bags/Print",
+      "Extra Weight/Determine extra weight",
+      "Extra Weight Fees/Price vs weight & status",
+      "Extra Bag Fees/Zero bags",
+      "Extra Bag Fees/Print",
+      "Fees/Build results"
+    ]
+  },
+  "fields": {
+    "timestamp": [
+      "2019-11-27T15:39:12.107Z"
+    ]
+  },
+  "highlight": {
+    "rulesetPath": [
+      "@kibana-highlighted-field@/Baggage_Pricing_RuleApp/1.0/Baggage_Pricing/1.1@/kibana-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1574869152107
+  ]
+}
+{
+  "_index": "odm-timeseries-idx-ibm-bai-2019.11.18-000001",
+  "_type": "odm-timeseries",
+  "_id": "452f07ec-d566-49ff-9be0-9685e5e7bb290",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "version": "1.0.1",
+    "id": "452f07ec-d566-49ff-9be0-9685e5e7bb290",
+    "timestamp": "2019-11-27T16:39:10.713+01:00",
+    "type": "EXECUTION_SUCCESS",
+    "odmType": "ruleset",
+    "rulesetPath": "/Baggage_Pricing_RuleApp/1.0/Baggage_Pricing/1.1",
+    "duration": 2,
+    "trace.task.names": [
+      "odm.Baggage Pricing Ruleflow",
+      "odm.Baggage Pricing Ruleflow>DecisionModelTask"
+    ],
+    "trace.task.durations": [
+      2,
+      2
+    ],
+    "trace.rule.names": [
+      "Weight Allowance/Weight allowance according to status",
+      "Weight Allowance/Print",
+      "Total Weight/Determine total weight",
+      "Extra bags/Determine number of extra bags",
+      "Extra bags/Print",
+      "Extra Weight/Determine extra weight",
+      "Extra Weight Fees/Price vs weight & status",
+      "Extra Bag Fees/Zero bags",
+      "Extra Bag Fees/Print",
+      "Fees/Build results"
+    ]
+  },
+  "fields": {
+    "timestamp": [
+      "2019-11-27T15:39:10.713Z"
+    ]
+  },
+  "highlight": {
+    "rulesetPath": [
+      "@kibana-highlighted-field@/Baggage_Pricing_RuleApp/1.0/Baggage_Pricing/1.1@/kibana-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1574869150713
+  ]
+}
+{
+  "_index": "odm-timeseries-idx-ibm-bai-2019.11.18-000001",
+  "_type": "odm-timeseries",
+  "_id": "aa866413-9baa-49aa-a085-79aa517b31610",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "version": "1.0.1",
+    "id": "aa866413-9baa-49aa-a085-79aa517b31610",
+    "timestamp": "2019-11-27T16:39:09.059+01:00",
+    "type": "EXECUTION_SUCCESS",
+    "odmType": "ruleset",
+    "rulesetPath": "/Baggage_Pricing_RuleApp/1.0/Baggage_Pricing/1.1",
+    "duration": 2,
+    "trace.task.names": [
+      "odm.Baggage Pricing Ruleflow",
+      "odm.Baggage Pricing Ruleflow>DecisionModelTask"
+    ],
+    "trace.task.durations": [
+      2,
+      1
+    ],
+    "trace.rule.names": [
+      "Weight Allowance/Weight allowance according to status",
+      "Weight Allowance/Print",
+      "Total Weight/Determine total weight",
+      "Extra bags/Determine number of extra bags",
+      "Extra bags/Print",
+      "Extra Weight/Determine extra weight",
+      "Extra Weight Fees/Price vs weight & status",
+      "Extra Bag Fees/Zero bags",
+      "Extra Bag Fees/Print",
+      "Fees/Build results"
+    ]
+  },
+  "fields": {
+    "timestamp": [
+      "2019-11-27T15:39:09.059Z"
+    ]
+  },
+  "highlight": {
+    "rulesetPath": [
+      "@kibana-highlighted-field@/Baggage_Pricing_RuleApp/1.0/Baggage_Pricing/1.1@/kibana-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1574869149059
+  ]
+}
+{
+  "_index": "odm-timeseries-idx-ibm-bai-2019.11.18-000001",
+  "_type": "odm-timeseries",
+  "_id": "4d79c8ba-7f43-4f9f-94f9-d516556e93370",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "version": "1.0.1",
+    "id": "4d79c8ba-7f43-4f9f-94f9-d516556e93370",
+    "timestamp": "2019-11-27T16:38:57.383+01:00",
+    "type": "EXECUTION_SUCCESS",
+    "odmType": "ruleset",
+    "rulesetPath": "/Baggage_Pricing_RuleApp/1.0/Baggage_Pricing/1.1",
+    "duration": 146,
+    "trace.task.names": [
+      "odm.Baggage Pricing Ruleflow",
+      "odm.Baggage Pricing Ruleflow>DecisionModelTask"
+    ],
+    "trace.task.durations": [
+      131,
+      127
+    ],
+    "trace.rule.names": [
+      "Weight Allowance/Weight allowance according to status",
+      "Weight Allowance/Print",
+      "Total Weight/Determine total weight",
+      "Extra bags/Determine number of extra bags",
+      "Extra bags/Print",
+      "Extra Weight/Determine extra weight",
+      "Extra Weight Fees/Price vs weight & status",
+      "Extra Bag Fees/Zero bags",
+      "Extra Bag Fees/Print",
+      "Fees/Build results"
+    ]
+  },
+  "fields": {
+    "timestamp": [
+      "2019-11-27T15:38:57.383Z"
+    ]
+  },
+  "highlight": {
+    "rulesetPath": [
+      "@kibana-highlighted-field@/Baggage_Pricing_RuleApp/1.0/Baggage_Pricing/1.1@/kibana-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1574869137383
+  ]
+}
