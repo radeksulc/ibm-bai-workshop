@@ -29,7 +29,7 @@ Before attending the virtual workshop, we recommend watching this brief [video](
 Two kinds of environment will be used during the hands-on labs. One is ocntainer-based with OpenShift. Second one is on-prem with BAI installed on plain Docker with no Kubernetes cluster.
 
 1. Container-based environment<br>
-<https://bluedemos.com/TODO>
+<http://bluedemos.com/show/3630>
 2. On-prem environment<br>
 <http://bluedemos.com/show/3917>
 
