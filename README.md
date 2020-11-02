@@ -37,7 +37,7 @@ Two kinds of environment will be used during the hands-on labs. One is ocntainer
 ## Lab 1 - Setup BAI events for BPMN, Case and ODM with Kibana dashboards
 Labs showing how to select business data propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to BAI. After that you can learn how to leverage these data for Kibana Dashboards.
 
-[Labs](labs/swat-containers-baw-odm/Readme.md)
+[Labs](labs/swat-containers-baw-odm)
 
 Duration approx. 4 hours.
 
@@ -48,17 +48,17 @@ Labs showing how to use data collected by BAI to train ML models which can be us
 
 Duration approx. 1 hour.
 
-## Lab 3 - OpenDistro Alerts
-
-TODO
-
-Duration approx. 30 minutes.
-
-## Lab 4 - Performance Center
+## Lab 3 - Performance Center
 
 TODO
 
 Duration approx. 1 hour.
+
+## Lab 4 - OpenDistro Alerts
+
+TODO
+
+Duration approx. 30 minutes.
 
 # Owner
 Radek Šulc<br>
