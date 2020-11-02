@@ -56,7 +56,7 @@ Duration approx. 1 hour.
 
 ## Lab 4 - OpenDistro Alerts
 
-TODO
+TODO - Nice to have
 
 Duration approx. 30 minutes.
 
