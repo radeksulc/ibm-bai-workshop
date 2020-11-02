@@ -1,1 +1,1 @@
-[Lab instructions](bai-scenario.pdf)
+[Lab instructions - PDF](bai-scenario.pdf)
