@@ -28,9 +28,9 @@ Before attending the virtual workshop, we recommend watching this brief [video](
 # Environments
 Two kinds of environment will be used during the hands-on labs. One is ocntainer-based with OpenShift. Second one is on-prem with BAI installed on plain Docker with no Kubernetes cluster.
 
-1. Container-based environment<br>
+1. Kubernetes-based environment with BAI on OpenShift<br>
 <http://bluedemos.com/show/3630>
-2. On-prem environment<br>
+2. On-prem environment with BAI4Sever on plain Docker<br>
 <http://bluedemos.com/show/3917>
 
 # Labs
@@ -41,20 +41,20 @@ Labs showing how to select business data propagated as payload of BAI events fro
 
 Duration approx. 4 hours.
 
-## Lab 3 - Artificial Intelligence and Machine Learning with BAI
+## Lab 2 - Artificial Intelligence and Machine Learning with BAI
 Labs showing how to use data collected by BAI to train ML models which can be used to make processes and decision logic smarter.
 
 [Labs](labs/ai/README.md)
 
 Duration approx. 1 hour.
 
-## Lab 4 - OpenDistro Alerts
+## Lab 3 - OpenDistro Alerts
 
 TODO
 
 Duration approx. 30 minutes.
 
-## Lab 5 - Performance Center
+## Lab 4 - Performance Center
 
 TODO
 
