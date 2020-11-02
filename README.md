@@ -35,14 +35,14 @@ Two kinds of environment will be used during the hands-on labs. One is ocntainer
 
 # Labs
 ## Lab 1 - Setup BAI events for BPMN, Case and ODM with Kibana dashboards
-Labs showing how to select business data propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to BAI. After that you can learn how to leverage these data for Kibana Dashboards.
+This lab shows how to select business data propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to the BAI. After that you can learn how to leverage these data and build Kibana Dashboards for operational management.
 
 [Labs](labs/swat-containers-baw-odm)
 
 Duration approx. 4 hours.
 
 ## Lab 2 - Artificial Intelligence and Machine Learning with BAI
-Labs showing how to use data collected by BAI to train ML models which can be used to make processes and decision logic smarter.
+Set of labs showing how to use data collected by BAI to train ML models which can be used to make processes and decision logic smarter.
 
 [Labs](labs/ai/README.md)
 
@@ -68,6 +68,8 @@ Digital Technical Engagement Team - IBM EMEA<br>
 
 # Credits
 Paul Pacholski, Jeffrey Goodhue, Thomas Schulze, Swapnil Agrawal, Matthias Jung, Matthias Jung, Pierre Feillet and many other IBMers.
+
+Special thanks to Reinhold Engelbrech for logistic support.
 
 # License
 The notebook found in this project are licensed under the [Apache License 2.0](LICENSE).
