@@ -37,14 +37,14 @@ Two kinds of environment will be used during the hands-on labs. One is ocntainer
 ## Lab 1 - Setup BAI events for BPMN, Case and ODM with Kibana dashboards
 This lab shows how to select business data propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to the BAI. After that you can learn how to leverage these data and build Kibana Dashboards for operational management.
 
-[Labs](labs/swat-containers-baw-odm)
+[Lab instructions](labs/swat-containers-baw-odm)
 
 Duration approx. 4 hours.
 
 ## Lab 2 - Artificial Intelligence and Machine Learning with BAI
 Set of labs showing how to use data collected by BAI to train ML models which can be used to make processes and decision logic smarter.
 
-[Labs](labs/ai/README.md)
+[Lab instructions](labs/ai/README.md)
 
 Duration approx. 1 hour.
 
