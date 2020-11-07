@@ -57,18 +57,6 @@ Set of labs showing how to use data collected by BAI to train ML models which ca
 
 Duration approx. 1 hour.
 
-## Lab 3 - Performance Center
-
-TODO
-
-Duration approx. 1 hour.
-
-## Lab 4 - OpenDistro Alerts
-
-TODO - Nice to have
-
-Duration approx. 30 minutes.
-
 # Owner
 Radek Šulc<br>
 <radek_sulc@cz.ibm.com><br>
