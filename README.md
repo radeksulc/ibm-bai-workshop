@@ -35,13 +35,12 @@ Before starting with the labs, start your environment using [Lab Environment Sta
 
 ## Download of lab materials to the lab environment
 Before starting with the labs, download lab instructions and artifacts to the lab environment:
-- Open Chrome web browser
+- Open Chrome web browser on the Windows desktop of your lab environment
 - Click the "BAI Workshop Materials" link in Chrome's bookmark bar or insert address <http://ibm.biz/bai-workshop-materials>
 - Click on the green download button with "Code" label and clock on "Download ZIP" and save it to directory **C:\Users\Administrator. Important: Using this location is important for Jypyter Notebooks in the AI labs.**
 - Once the zip file download finishes click "Show in folder" in the context menu of the downloaded item.
 - Right click on the "ibm-bai-workshop-main.zip" and select "7-Zip" > "Extract Here"
-- Open the PDF with lab instructions located in "C:\Users\Administrator\Downloads\ibm-bai-workshop-main\labs\swat-containers-baw-odm\bai-scenario.pdf"
-- Follow the instructions in the PDF
+- Now you have all the artifacts including the lab instructions downloaded locally and unzipped in Adnimintsrator's home directory.
 
 ## Lab 1 - BAI events setup for BPMN, Case and ODM with Kibana dashboards
 This lab shows how to select specific business data to be propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to BAI. After that you can learn how to leverage these data and build Kibana Dashboards for operational management.
