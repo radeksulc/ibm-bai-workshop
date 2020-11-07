@@ -1,0 +1,3 @@
+curl -k "https://kibana.apps.ocp.example.com/api/console/proxy?path=_bulk&method=POST" -H "kbn-version: 6.7.1" -H "Content-Type: application/x-ndjson" -H "Authorization: Basic YWRtaW46cGFzc3cwcmQ=" --data-binary @icmt.json
+curl -k "https://kibana.apps.ocp.example.com/api/console/proxy?path=_bulk&method=POST" -H "kbn-version: 6.7.1" -H "Content-Type: application/x-ndjson" -H "Authorization: Basic YWRtaW46cGFzc3cwcmQ=" --data-binary @processt.json
+curl -k "https://kibana.apps.ocp.example.com/api/console/proxy?path=_bulk&method=POST" -H "kbn-version: 6.7.1" -H "Content-Type: application/x-ndjson" -H "Authorization: Basic YWRtaW46cGFzc3cwcmQ=" --data-binary @odmt.json

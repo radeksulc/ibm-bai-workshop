@@ -1,0 +1,25 @@
+[
+  
+  {
+    "_id": "0a90a780-61c3-11e9-9ba3-9d5467340968",
+    "_type": "dashboard",
+    "_source": {
+      "title": "MA - Getting Started Dashboard v1.0",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"x\":24,\"y\":0,\"w\":23,\"h\":12,\"i\":\"2\"},\"id\":\"cdc41120-60fa-11e9-b9e1-b1b47b8bdc4d\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":12,\"w\":24,\"h\":12,\"i\":\"3\"},\"id\":\"beb499c0-6122-11e9-9ba3-9d5467340968\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":24,\"y\":12,\"w\":23,\"h\":12,\"i\":\"4\"},\"id\":\"d116bb50-61ba-11e9-9ba3-9d5467340968\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.3.1\"},{\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":12,\"i\":\"5\"},\"version\":\"6.5.3\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"id\":\"52730720-42b7-11ea-baa8-a10b92b48ad2\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-30d",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  }
+]
