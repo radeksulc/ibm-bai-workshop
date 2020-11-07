@@ -23,27 +23,37 @@ The environments for the labs will remain available for couple of days after the
 Before attending the virtual workshop, we recommend watching this brief [video](https://www.youtube.com/watch?v=aLPi281Z8NQ).
 
 # Presentations
-<https://ibm.box.com/v/bai-workshop-materials>
+[Presentations](presentations/Readme.md)
 
 # Labs
-## Environment
+## Environment startup
 Attendees of the workshop have their environments pre-deployed. Every attendee has a dedicated environment.
 
 List of the environments is available on IBM Box at this [link](https://ibm.box.com/v/bai-workshop-materials). The link is protected by a password shared by the instructor.
 
-Please start your environment before starting with the labs using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf).
+Before starting with the labs, start your environment using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf).
 
-## Lab 1 - Setup BAI events for BPMN, Case and ODM with Kibana dashboards
+## Download of lab materials to the lab environment
+Download the lab instructions and artifacts to the lab environment by:
+- Open Chrome web browser
+- Click the "BAI Workshop Materials" link in Chrome's bookmark bar or insert address <http://ibm.biz/bai-workshop-materials>
+- Click on the green download button with "Code" label and clock on "Download ZIP" and save it to directory **C:\Users\Administrator. Important: Using this location is important for Jypyter Notebooks in the AI labs.**
+- Once the zip file download finishes click "Show in folder" in the context menu of the downloaded item.
+- Right click on the "ibm-bai-workshop-main.zip" and select "7-Zip" > "Extract Here"
+- Open the PDF with lab instructions located in "C:\Users\Administrator\Downloads\ibm-bai-workshop-main\labs\swat-containers-baw-odm\bai-scenario.pdf"
+- Follow the instructions in the PDF
+
+## Lab 1 - BAI events setup for BPMN, Case and ODM with Kibana dashboards
 This lab shows how to select specific business data to be propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to BAI. After that you can learn how to leverage these data and build Kibana Dashboards for operational management.
 
-[Lab instructions](labs/swat-containers-baw-odm)
+[Lab materials](labs/bpmn-case-odm-kibana/Readme.md)
 
 Duration approx. 4 hours.
 
 ## Lab 2 - Artificial Intelligence and Machine Learning with BAI
 Set of labs showing how to use data collected by BAI to train ML models which can be used to make processes and decision logic smarter.
 
-[Lab instructions](labs/ai/README.md)
+[Lab materials](labs/ai/README.md)
 
 Duration approx. 1 hour.
 
