@@ -26,14 +26,14 @@ Before attending the virtual workshop, we recommend watching this brief [video](
 [Presentations](presentations/Readme.md)
 
 # Labs
-## Environment startup
+## Preparation 1/2 - Environment startup
 Attendees of the workshop have their environments pre-deployed. Every attendee has a dedicated environment.
 
-List of the environments is available on IBM Box at this [link](https://ibm.box.com/v/bai-workshop-materials). The link is protected by a password shared by the instructor.
+List of the environments is available on IBM Box at [Lab Environments](https://ibm.box.com/v/bai-workshop-materials). The link is protected by a password shared by the instructor.
 
 Before starting with the labs, start your environment using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf).
 
-## Download of lab materials to the lab environment
+## Preparation 2/2 - Downloading of the lab materials to your lab environment
 Before starting with the labs, download lab instructions and artifacts to the lab environment:
 - Open Chrome web browser on the Windows desktop of your lab environment
 - Click the "BAI Workshop Materials" link in Chrome's bookmark bar or insert address <http://ibm.biz/bai-workshop-materials>
