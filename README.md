@@ -23,19 +23,18 @@ The environments for the labs will remain available for couple of days after the
 Before attending the virtual workshop, we recommend watching this brief [video](https://www.youtube.com/watch?v=aLPi281Z8NQ).
 
 # Presentations
-<https://ibm.box.com/TODO>
-
-# Environments
-Two kinds of environment will be used during the hands-on labs. One is ocntainer-based with OpenShift. Second one is on-prem with BAI installed on plain Docker with no Kubernetes cluster.
-
-1. Kubernetes-based environment with BAI on OpenShift<br>
-<http://bluedemos.com/show/3630>
-2. On-prem environment with BAI4Sever on plain Docker<br>
-<http://bluedemos.com/show/3917>
+<https://ibm.box.com/v/bai-workshop-materials>
 
 # Labs
+## Environment
+Attendees of the workshop have their environments pre-deployed. Every attendee has a dedicated environment.
+
+List of the environments is available on IBM Box at this [link](https://ibm.box.com/v/bai-workshop-materials). The link is protected by a password shared by the instructor.
+
+Please start your environment before starting with the labs using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf).
+
 ## Lab 1 - Setup BAI events for BPMN, Case and ODM with Kibana dashboards
-This lab shows how to select business data propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to the BAI. After that you can learn how to leverage these data and build Kibana Dashboards for operational management.
+This lab shows how to select specific business data to be propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to BAI. After that you can learn how to leverage these data and build Kibana Dashboards for operational management.
 
 [Lab instructions](labs/swat-containers-baw-odm)
 
