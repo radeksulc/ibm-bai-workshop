@@ -34,7 +34,7 @@ List of the environments is available on IBM Box at this [link](https://ibm.box.
 Before starting with the labs, start your environment using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf).
 
 ## Download of lab materials to the lab environment
-Download the lab instructions and artifacts to the lab environment by:
+Before starting with the labs, download lab instructions and artifacts to the lab environment:
 - Open Chrome web browser
 - Click the "BAI Workshop Materials" link in Chrome's bookmark bar or insert address <http://ibm.biz/bai-workshop-materials>
 - Click on the green download button with "Code" label and clock on "Download ZIP" and save it to directory **C:\Users\Administrator. Important: Using this location is important for Jypyter Notebooks in the AI labs.**
