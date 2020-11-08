@@ -1,5 +1,5 @@
-# Artificial Intelligence with Processes, Cases, Decisions and Business Automation Insights
-This repository features Artificial Intelligence Notebook Samples for Business Automation Insights.
+# Artificial Intelligence/Machine Learning with Business Automation Insights
+This repository features Artificial Intelligence Notebook Samples for Business Automation Insights together with Processes and Cases running on IBM Business Automation Workflow and Decisions running on IBM Operational Decision Manager.
 
 ## Preparing to start Jupyter Notebooks
 You will be using interactive Jupyter Notebooks during these AI labs.
