@@ -66,7 +66,7 @@ Digital Technical Engagement Team - IBM EMEA<br>
 # Credits
 Paul Pacholski, Jeffrey Goodhue, Thomas Schulze, Swapnil Agrawal, Matthias Jung, Matthias Jung, Pierre Feillet and many other IBMers.
 
-Special thanks to Dr. Reinhold Engelbrech for logistic support and the Case Management Guru Massimiliano Carra for helping me with Case stuff.
+Special thanks to Dr. Reinhold Engelbrech for logistic support and the Case Management Guru Massimiliano Carra for helping me with the Case stuff.
 
 # License
 The notebook found in this project are licensed under the [Apache License 2.0](LICENSE).
