@@ -18,7 +18,7 @@ You are encouraged to study content of the cells and to watch output of their ex
 
 ## Business Process Recommendation
 
-A notebook that shows how to use Business Automation Insight data to create a recommendation service for a Claim approval process.
+This is #1 Jyputer Notebook of the workshop that shows how to use Business Automation Insight data to create a recommendation service for a Claim approval process.
 
 [BPM recommendation service with BAI.ipynb](notebooks/BPM%20recommendation%20service%20with%20BAI.ipynb)
 
