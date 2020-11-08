@@ -1,4 +1,4 @@
-# bai-ai-samples
+# Artificial Intelligence with Processes, Cases, Decisions and Business Automation Insights
 This repository features Artificial Intelligence Notebook Samples for Business Automation Insights.
 
 ## Preparing to start Jupyter Notebooks
