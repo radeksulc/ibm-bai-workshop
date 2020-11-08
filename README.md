@@ -39,7 +39,7 @@ Before starting with the labs, download lab instructions and artifacts to the la
 - Click the "BAI Workshop Materials" link in Chrome's bookmark bar or insert address <http://ibm.biz/bai-workshop-materials>
 - Click on the green download button with "Code" label and clock on "Download ZIP" and save it to directory **C:\Users\Administrator. Important: Using this location is important for Jypyter Notebooks in the AI labs.**
 - Once the zip file download finishes click "Show in folder" in the context menu of the downloaded item.
-- Right click on the "ibm-bai-workshop-main.zip" and select "7-Zip" > "Extract Here"
+- Right click on the "ibm-bai-workshop-main.zip" and select "7-Zip" > "Extract Here". You can delete and completely rewrite whole directory C:\Users\Administrator\ibm-bai-workshop-main if it already exists.
 - Now you have all the artifacts including the lab instructions downloaded locally and unzipped in Adnimintsrator's home directory.
 - Directory **C:\Users\Administrator\ibm-bai-workshop-main** containing the unzipped workshop materials will be referenced as **WORKSHOP_DIRECTORY** in all the workshop materials.
 
