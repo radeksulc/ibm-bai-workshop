@@ -6,7 +6,7 @@ You will be using interactive Jupyter Notebooks during these AI labs.
 
 First - start the environment which runs the Jupyter Notebooks:
 - Click Windows Start button, search for 'Anaconda Prompt (Anaconda3)' and run it.
-- Type 'bai-pyspark' and hit Enter
+- Type **bai-pyspark** and hit Enter (standard Pyspark enhanced with PMML export capabilities)
 - Firefox window will appear with Jupyter browser.
 - Navigate to folder ibm-bai-workshop-main > labs > ai > notebooks
 
