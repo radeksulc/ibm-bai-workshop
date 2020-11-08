@@ -41,6 +41,7 @@ Before starting with the labs, download lab instructions and artifacts to the la
 - Once the zip file download finishes click "Show in folder" in the context menu of the downloaded item.
 - Right click on the "ibm-bai-workshop-main.zip" and select "7-Zip" > "Extract Here"
 - Now you have all the artifacts including the lab instructions downloaded locally and unzipped in Adnimintsrator's home directory.
+- Directory **C:\Users\Administrator\ibm-bai-workshop-main** containing the unzipped workshop materials will be referenced as **WORKSHOP_DIRECTORY** in all the workshop materials.
 
 ## Lab 1 - BAI events setup for BPMN, Case and ODM with Kibana dashboards
 This lab shows how to select specific business data to be propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to BAI. After that you can learn how to leverage these data and build Kibana Dashboards for operational management.
