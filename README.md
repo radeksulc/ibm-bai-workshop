@@ -33,7 +33,7 @@ In case you are in self-paced mode - please follow next two sections on your own
 
 ## Preparation 1/2 - Environment startup
 
-We are working on sharing of the currently available workshop environment template. It is going to be available for self-paced labs on <http://bluedemos.com>. ETA December 2020.
+We are working on sharing of the currently available workshop environment template. It is going to be available for self-paced labs on <http://bluedemos.com>. ETA November 2020. Link to the environment template will be available here.
 
 Before starting with the labs, start your environment using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf). **Please do not update Windows if asked.**
 
@@ -72,7 +72,7 @@ Digital Technical Engagement Team - IBM EMEA<br>
 # Credits
 Paul Pacholski, Jeffrey Goodhue, Thomas Schulze, Swapnil Agrawal, Matthias Jung, Matthias Jung, Pierre Feillet and many other IBMers.
 
-Special thanks to Dr. Reinhold Engelbrech for logistic support and the Case Management Guru Massimiliano Carra for helping me with the Case stuff.
+Special thanks to Dr. Reinhold Engelbrecht for logistic support and the Case Management Guru Massimiliano Carra for helping me with the Case stuff.
 
 # License
 The notebook found in this project are licensed under the [Apache License 2.0](LICENSE).
