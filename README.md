@@ -31,8 +31,7 @@ Attendees of the workshop have their environments pre-deployed. Every attendee h
 
 List of the environments is available on IBM Box at [Lab Environments](https://ibm.box.com/v/bai-workshop-materials). The link is protected by a password shared by the instructor.
 
-Before starting with the labs, start your environment using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf).
-** Please do not update Windows if asked. **
+Before starting with the labs, start your environment using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf). **Please do not update Windows if asked.**
 
 ## Preparation 2/2 - Downloading of the lab materials to your lab environment
 Before starting with the labs, download lab instructions and artifacts to the lab environment:
