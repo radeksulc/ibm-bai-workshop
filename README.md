@@ -22,8 +22,8 @@ The environments for the labs will remain available for couple of days after the
 
 Before attending the virtual workshop, we recommend watching this brief [video](https://www.youtube.com/watch?v=aLPi281Z8NQ).
 
-# Presentations
-[Presentations](presentations/Readme.md)
+# Presentations and logistic materials
+[Shared folder in IBM Box](https://ibm.box.com/v/IBMBAIWorkshop)
 
 # Labs
 
