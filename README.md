@@ -48,14 +48,18 @@ This lab shows how to select specific business data to be propagated as payload 
 
 [Lab materials](labs/bpmn-case-odm-kibana/)
 
-Duration approx. 4 hours.
+Level: Advanced
+
+Duration: Approx. 4 hours.
 
 ## Lab 2 - Artificial Intelligence and Machine Learning with BAI
 Set of labs showing how to use data collected by BAI to train ML models which can be used to make processes and decision logic smarter.
 
 [Lab materials](labs/ai/README.md)
 
-Duration approx. 1 hour.
+Level: Advanced
+
+Duration: Approx. 1 hour.
 
 # Owner
 Radek Šulc<br>
