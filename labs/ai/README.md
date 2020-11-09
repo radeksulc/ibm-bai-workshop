@@ -16,23 +16,30 @@ When you open the Notebook, a Python kernel is started in the background. Every 
 
 You are encouraged to study content of the cells and to watch output of their execution. The flow is very intuitive and self-explaining.
 
-## Mab 1 - Business Process Recommendation
+## Troubleshooting
+**Processing of the Jupyter Notebeek sometimes freezes showing asterisk symbol on the left side of a cell.** Esp. in cells using brunel. In this case try to:
+- Close the web browser windows with Notebooks.
+- Stop pyspark on the command line - repeat pressing CTRL+C until you see the prompt again.
+
+Some labs do not work on Python 3.8+. Version 3.7.9 seems to be fine.
+
+## Lab 1 - Business Process Recommendation
 
 This is #1 Jyputer Notebook of the workshop that shows how to use Business Automation Insight data to create a recommendation service for a Claim approval process.
 
 - [BPM recommendation service with BAI.ipynb](./notebooks/BPM%20recommendation%20service%20with%20BAI.ipynb)
 
-## Lab 2 - Process Duration Estimation
-
-A sample notebook that explains how to use the data stored in Business Automation Insights to create a machine learning model that can estimate the duration of processes.
-
-- [Process Duration Estimation with BAI.ipynb](./notebooks/Process%20Duration%20Estimation%20with%20BAI.ipynb)
-
-## Lab 3 - Querying data and building charts from Business Automation Insights data
+## Lab 2 - Querying data and building charts from Business Automation Insights data
 
 A sample notebook that explains how to use the process execution data of Business Automation Insights to create charts 
 
 - [BAI dashboard.ipynb](./notebooks/BAI%20dashboard.ipynb)
+
+## Lab 3 - Process Duration Estimation
+
+A sample notebook that explains how to use the data stored in Business Automation Insights to create a machine learning model that can estimate the duration of processes.
+
+- [Process Duration Estimation with BAI.ipynb](./notebooks/Process%20Duration%20Estimation%20with%20BAI.ipynb)
 
 ## Lab 4 - Analyzing automated loan approval decisions
 
@@ -48,16 +55,9 @@ What are the rules always executed in your decisions? Never executed?
 
 - [Analyzing the rule coverage in automated decisions](./notebooks/Analyzing%20the%20rule%20coverage%20in%20automated%20decisions.ipynb)
  
-## Lab 6 - Exporting and Importing BAI events
+## Supporting material - Exporting and Importing BAI events
 
 - [Export and import of BAI events](./EVENT-EXPORT-IMPORT.md)
-
-## Troubleshooting
-Processing of the Jupyter Notebeek sometimes freezes showing asterisk symbol on the left side of a cell. Esp. in cells using brunel. In this case try to:
-- Close the web browser windows with Notebooks.
-- Stop pyspark on the command line - repeat pressing CTRL+C until you see the prompt again.
-
-Some labs do not work on Python 3.8+. Version 3.7.9 seems to be fine.
 
 # License
 The notebook found in this project are licensed under the [Apache License 2.0](LICENSE).
