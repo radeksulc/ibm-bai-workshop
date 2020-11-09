@@ -33,7 +33,7 @@ In case you are in self-paced mode - please follow next two sections on your own
 
 ## Preparation 1/2 - Environment startup
 
-We are working on sharing of the workshop environment template which is going to be available for self-paced labs on <http://bluedemos.com>. ETA December 2020.
+We are working on sharing of the currently available workshop environment template. It is going to be available for self-paced labs on <http://bluedemos.com>. ETA December 2020.
 
 Before starting with the labs, start your environment using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf). **Please do not update Windows if asked.**
 
