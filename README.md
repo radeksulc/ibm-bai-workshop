@@ -22,8 +22,8 @@ The environments for the labs will remain available for couple of days after the
 
 Before attending the virtual workshop, we recommend watching this brief [video](https://www.youtube.com/watch?v=aLPi281Z8NQ).
 
-# Presentations and logistic materials
-[Shared folder in IBM Box](https://ibm.box.com/v/IBMBAIWorkshop)
+# Presentations and access to your lab environments
+Please open [Shared folder in IBM Box](https://ibm.box.com/v/IBMBAIWorkshop)
 
 # Labs
 
@@ -63,7 +63,7 @@ Set of labs showing how to use data collected by BAI to train ML models which ca
 Level: Advanced<br>
 Duration: Approx. 1 hour.
 
-## Lab 3 - Simple tutorials - Optional
+## Lab 3 - Simple demonstrations - Optional
 
 Available at <https://ibm.ent.box.com/v/InsightsTutorials>
 
