@@ -32,9 +32,8 @@ Before attending the virtual workshop, we recommend watching this brief [video](
 In case you are in self-paced mode - please follow next two sections on your own.
 
 ## Preparation 1/2 - Environment startup
-Attendees of the workshop have their environments pre-deployed. Every attendee has a dedicated environment.
 
-List of the environments is available on IBM Box at [Lab Environments](https://ibm.box.com/v/bai-workshop-materials). The link is protected by a password shared by the instructor.
+We are working on sharing of the workshop environment template which is going to be available for self-paced labs on <http://bluedemos.com>. ETA December 2020.
 
 Before starting with the labs, start your environment using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf). **Please do not update Windows if asked.**
 
