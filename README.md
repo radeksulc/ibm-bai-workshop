@@ -63,6 +63,21 @@ Set of labs showing how to use data collected by BAI to train ML models which ca
 Level: Advanced<br>
 Duration: Approx. 1 hour.
 
+## Lab 3 - Simple tutorials - Optional
+
+Available at <https://ibm.ent.box.com/v/InsightsTutorials>
+
+You can open the URL directly from web browser in your environment. Shortcut is also available on the Windows **Desktop** > folder **Tutorials** > **BAI LABS**.
+
+Two labs are available:
+- Introduction to IBM Business Automation Insights Demo and Lab - Billing Disputes
+- Introduction to IBM Business Automation Insights Demo and Lab - Payment Processing
+
+In both labs you can skip chapter **2 Setup Instructions** as your environment is already started.
+
+Level: Beginner<br>
+Duration: Approx. 90 minutes.
+
 # Owner
 Radek Šulc<br>
 <radek_sulc@cz.ibm.com><br>
