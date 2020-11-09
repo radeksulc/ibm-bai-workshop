@@ -26,6 +26,9 @@ Before attending the virtual workshop, we recommend watching this brief [video](
 [Presentations](presentations/Readme.md)
 
 # Labs
+
+> **In case you are attending the workshop live - you can skip the next two preparation sections and go directly to the Labs. We have already started the environment with all components for you to save some time.**
+
 ## Preparation 1/2 - Environment startup
 Attendees of the workshop have their environments pre-deployed. Every attendee has a dedicated environment.
 

@@ -17,9 +17,9 @@ When you open the Notebook, a Python kernel is started in the background. Every 
 You are encouraged to study content of the cells and to watch output of their execution. The flow is very intuitive and self-explaining.
 
 ## Troubleshooting
-**Processing of the Jupyter Notebeek sometimes freezes showing asterisk symbol on the left side of a cell.** Esp. in cells using brunel. In this case try to:
-- Close the web browser windows with Notebooks.
-- Stop pyspark on the command line - repeat pressing CTRL+C until you see the prompt again.
+> **Processing of the Jupyter Notebeek sometimes freezes showing asterisk symbol on the left side of a cell.** Esp. in cells using brunel. If it gets suck for more than like 30 seconds, plase restart the Notebook runtime:
+> - Close the web browser windows with Notebooks.
+> - Stop pyspark on the command line - repeat pressing CTRL+C until you see the prompt again.
 
 Some labs do not work on Python 3.8+. Version 3.7.9 seems to be fine.
 
