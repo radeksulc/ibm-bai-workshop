@@ -29,6 +29,8 @@ Before attending the virtual workshop, we recommend watching this brief [video](
 
 > **In case you are attending the workshop live - you can skip the next two preparation sections and go directly to the Labs. We have already started the environment with all components for you to save some time.**
 
+In case you are in self-paced mode - please follow next two sections on your own.
+
 ## Preparation 1/2 - Environment startup
 Attendees of the workshop have their environments pre-deployed. Every attendee has a dedicated environment.
 
@@ -36,11 +38,11 @@ List of the environments is available on IBM Box at [Lab Environments](https://i
 
 Before starting with the labs, start your environment using [Lab Environment Startup Instructions](/labs/environment/environment-startup.pdf). **Please do not update Windows if asked.**
 
-## Preparation 2/2 - Downloading of the lab materials to your lab environment
+## Preparation 2/2 - Downloading of the lab materials to your lab environment to have latest available version of the artifacts
 Before starting with the labs, download lab instructions and artifacts to the lab environment:
 - Open Chrome web browser on the Windows desktop of your lab environment
 - Click on the "BAI Workshop Materials" link in Chrome's bookmark bar or insert address <http://ibm.biz/bai-workshop-materials>
-- Click on the green download button with "Code" label and clock on "Download ZIP" and save it to directory **C:\Users\Administrator** - using this location is important for Jypyter Notebooks in the AI labs.
+- Click on the green download button with "Code" label and clock on "Download ZIP" and save it to directory **C:\Users\Administrator** - using this location is important for Jupyter Notebooks in the AI labs.
 - Once the zip file download finishes click "Show in folder" in the context menu of the downloaded item.
 - Right click on the "ibm-bai-workshop-main.zip" and select "7-Zip" > "Extract Here". You can completely rewrite the whole directory C:\Users\Administrator\ibm-bai-workshop-main if it already exists.
 - Now you have all the artifacts including the lab instructions downloaded locally and unzipped in Adnimintsrator's home directory.
