@@ -1,4 +1,6 @@
-# Export & Import Business Automation Insights events 
+# Export & Import Business Automation Insights events
+
+This file describes how you can export and import data from/to Elasticsearch using Elasticdump based on Node.js. It can be useful for transfering data between environments, backup and restore.
 
 ## Export BAI events from your elastic search server
 

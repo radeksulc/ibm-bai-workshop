@@ -20,15 +20,19 @@ You are encouraged to study content of the cells and to watch output of their ex
 
 This is #1 Jyputer Notebook of the workshop that shows how to use Business Automation Insight data to create a recommendation service for a Claim approval process.
 
-[BPM recommendation service with BAI.ipynb](notebooks/BPM%20recommendation%20service%20with%20BAI.ipynb)
+- [BPM recommendation service with BAI.ipynb](./notebooks/BPM%20recommendation%20service%20with%20BAI.ipynb)
 
 ## Process Duration Estimation
 
 A sample notebook that explains how to use the data stored in Business Automation Insights to create a machine learning model that can estimate the duration of processes.
 
+- [Process Duration Estimation with BAI.ipynb](./notebooks/Process%20Duration%20Estimation%20with%20BAI.ipynb)
+
 ## Querying data and building charts from Business Automation Insights data
 
 A sample notebook that explains how to use the process execution data of Business Automation Insights to create charts 
+
+- [BAI dashboard.ipynb](./notebooks/BAI%20dashboard.ipynb)
 
 ## Analyzing automated loan approval decisions
 
