@@ -52,6 +52,13 @@ What are the rules always executed in your decisions? Never executed?
 
 - [Export and import of BAI events](./EVENT-EXPORT-IMPORT.md)
 
+## Troubleshooting
+Processing of the Jupyter Notebeek sometimes freezes showing asterisk symbol on the left side of a cell. Esp. in cells using brunel. In this case try to:
+- Close the web browser windows with Notebooks.
+- Stop pyspark on the command line - repeat pressing CTRL+C until you see the prompt again.
+
+Some labs do not work on Python 3.8+. Version 3.7.9 seems to be fine.
+
 # License
 The notebook found in this project are licensed under the [Apache License 2.0](LICENSE).
 
