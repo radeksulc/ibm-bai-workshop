@@ -25,16 +25,14 @@ Before attending the virtual workshop, we recommend watching this brief [video](
 # Presentations and access to your lab environments
 Please open [Shared folder in IBM Box](https://ibm.box.com/v/IBMBAIWorkshop)
 
-# Labs
-
 > **In case you are attending the workshop live - you can skip the next two preparation sections and go directly to the Labs. We have already started the environment with all components for you to save some time.**
 
 In case you are in self-paced mode - please follow next two sections on your own.
 
-## Preparation for the labs
+# Preparation for the labs
 
 [Preparation for the labs](labs/preparation/Readme.md)
-
+# Labs
 ## Lab 1 - BAI events setup for BPMN, Case and ODM with Kibana dashboards
 This lab shows how to select specific business data to be propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to BAI. After that you can learn how to leverage these data and build Kibana Dashboards for operational management.
 
