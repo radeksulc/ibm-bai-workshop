@@ -31,7 +31,8 @@ In case you are in self-paced mode - please follow next two sections on your own
 
 # Preparation for the labs
 
-[Preparation for the labs](labs/preparation/Readme.md)
+[Preparation for the labs - Instructions](labs/preparation/Readme.md)
+
 # Labs
 ## Lab 1 - BAI events setup for BPMN, Case and ODM with Kibana dashboards
 This lab shows how to select specific business data to be propagated as payload of BAI events from BPMN processes, Cases and ODM Decision Services to BAI. After that you can learn how to leverage these data and build Kibana Dashboards for operational management.
