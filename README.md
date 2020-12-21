@@ -63,7 +63,7 @@ Set of labs showing how to use data collected by BAI to train ML models which ca
 Level: Advanced<br>
 Duration: Approx. 1 hour.
 
-## Lab 3 - Simple demonstrations - Optional
+## Lab 3 - Simple exercises for discovery and demonstrations
 
 Available at <https://ibm.ent.box.com/v/InsightsTutorials>
 
