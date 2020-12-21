@@ -12,7 +12,7 @@ First - start the environment which runs the Jupyter Notebooks:
 
 Now you can select any Jupyter Notebook (files with extension ipynb), explore it and run it.
 
-When you open the Notebook, a Python kernel is started in the background. Every notebook is organized in cells which can be independently started. You can simply keep clicking the the Run button and jump from one cell to another until you reach the end of the Notebook.
+When you open the Notebook, a Python kernel is started in the background. Every notebook is organized in cells which can be independently started. You can simply keep clicking the Run button and jump from one cell to another until you reach the end of the Notebook.
 
 You are encouraged to study content of the cells and to watch output of their execution. The flow is very intuitive and self-explaining.
 
