@@ -1,0 +1,386 @@
+PUT /.bai-store-dashboards/_doc/importedBuiltin4
+{
+    "id": "importedBuiltin4",
+    "name": "Workflow - Cases",
+    "description": "The Workflow Case dashboard page displays chart widgets that provide case-related statistics.",
+    "owner": "BaiBuiltin",
+    "isPublic": true,
+    "visualizations": [{
+            "id": "5460d125-5817-476b-83a9-2e0682c3db90",
+            "name": "Cases in each state",
+            "description": "This widget displays a pie chart that shows the proportion and count of cases in each state: Working and Complete.",
+            "config": {
+                "type": "MetricConfigDto",
+                "domain": {
+                    "kind": "Workflow (Case)",
+                    "id": "*",
+                    "name": "ALL",
+                    "fields": [
+                        "*"
+                    ],
+                    "fieldValues": [
+                        "*"
+                    ]
+                },
+                "filters": [],
+                "fieldAggregation": {
+                    "field": "",
+                    "aggregation": "Count",
+                    "groupBy": [
+                        "state.keyword",
+                        "source-class-display-name.keyword",
+                        "solution-name.keyword"
+                    ]
+                },
+                "settings": {
+                    "type": "SingleSettingsPieDto",
+                    "unit": "",
+                    "_version": 1
+                }
+            },
+            "layouts": [{
+                    "kind": "SM",
+                    "x": 0,
+                    "y": 3,
+                    "w": 1,
+                    "h": 3
+                }, {
+                    "kind": "LG",
+                    "x": 2,
+                    "y": 0,
+                    "w": 2,
+                    "h": 3
+                }
+            ]
+        }, {
+            "id": "29dbccce-707f-4336-a273-fe554f0987a8",
+            "name": "Cases in progress",
+            "description": "This widget displays a bar graph in which each bar shows the number of cases that are in-progress for a case type.",
+            "config": {
+                "type": "MetricConfigDto",
+                "domain": {
+                    "kind": "Workflow (Case)",
+                    "id": "*",
+                    "name": "ALL",
+                    "fields": [
+                        "*"
+                    ],
+                    "fieldValues": [
+                        "*"
+                    ]
+                },
+                "filters": [{
+                        "field": "state.keyword",
+                        "op": "Eq",
+                        "values": [
+                            "Working"
+                        ]
+                    }
+                ],
+                "fieldAggregation": {
+                    "field": "",
+                    "aggregation": "Count",
+                    "groupBy": [
+                        "source-class-display-name.keyword"
+                    ]
+                },
+                "settings": {
+                    "type": "SingleSettingsBarDto",
+                    "unit": "Case Type Count",
+                    "_version": 1
+                }
+            },
+            "layouts": [{
+                    "kind": "SM",
+                    "x": 0,
+                    "y": 0,
+                    "w": 1,
+                    "h": 3
+                }, {
+                    "kind": "LG",
+                    "x": 0,
+                    "y": 0,
+                    "w": 2,
+                    "h": 3
+                }
+            ]
+        }, {
+            "id": "5d4bd7eb-d599-4987-ad26-826a0e000b5e",
+            "name": "Average age of in-progress cases (in seconds)",
+            "description": "This widget displays a bar graph in which each bar shows the average age of in-progress cases for each case type.",
+            "config": {
+                "type": "MetricConfigDto",
+                "domain": {
+                    "kind": "Workflow (Case)",
+                    "id": "*",
+                    "name": "ALL",
+                    "fields": [
+                        "*"
+                    ],
+                    "fieldValues": [
+                        "*"
+                    ]
+                },
+                "filters": [
+				   {
+                        "field": "duration-seconds",
+                        "op": "IsDefined",
+                        "values": []
+                    }
+                ],
+                "fieldAggregation": {
+                    "field": "duration-seconds",
+                    "aggregation": "Average",
+                    "groupBy": [
+                        "source-class-display-name.keyword"
+                    ]
+                },
+                "settings": {
+                    "type": "SingleSettingsBarDto",
+                    "unit": "",
+                    "_version": 1
+                }
+            },
+            "layouts": [{
+                    "kind": "SM",
+                    "x": 0,
+                    "y": 6,
+                    "w": 1,
+                    "h": 3
+                }, {
+                    "kind": "LG",
+                    "x": 4,
+                    "y": 0,
+                    "w": 2,
+                    "h": 3
+                }
+            ]
+        }, {
+            "id": "692aa065-09d8-4268-9af5-706eeee65038",
+            "name": "Total number of cases",
+            "description": "This widget displays the total number of cases.",
+            "config": {
+                "type": "MetricConfigDto",
+                "domain": {
+                    "kind": "Workflow (Case)",
+                    "id": "*",
+                    "name": "ALL",
+                    "fields": [
+                        "*"
+                    ],
+                    "fieldValues": [
+                        "*"
+                    ]
+                },
+                "filters": [],
+                "fieldAggregation": {
+                    "field": "",
+                    "aggregation": "Count"
+                },
+                "settings": {
+                    "type": "SingleSettingsTextDto",
+                    "unit": "",
+                    "_version": 1
+                }
+            },
+            "layouts": [{
+                    "kind": "SM",
+                    "x": 0,
+                    "y": 9,
+                    "w": 1,
+                    "h": 3
+                }, {
+                    "kind": "LG",
+                    "x": 3,
+                    "y": 6,
+                    "w": 3,
+                    "h": 3
+                }
+            ]
+        }, {
+            "id": "e6cecfbf-c501-47b2-b8a0-180399043c31",
+            "name": "Average case duration",
+            "description": "This widget displays the average duration of the cases in seconds.",
+            "config": {
+                "type": "MetricConfigDto",
+                "domain": {
+                    "kind": "Workflow (Case)",
+                    "id": "*",
+                    "name": "ALL",
+                    "fields": [
+                        "*"
+                    ],
+                    "fieldValues": [
+                        "*"
+                    ]
+                },
+                "filters": [],
+                "fieldAggregation": {
+                    "field": "duration-seconds",
+                    "aggregation": "Average"
+                },
+                "settings": {
+                    "type": "SingleSettingsTextDto",
+                    "unit": "Average Duration (seconds)",
+                    "_version": 1
+                }
+            },
+            "layouts": [{
+                    "kind": "SM",
+                    "x": 0,
+                    "y": 12,
+                    "w": 1,
+                    "h": 3
+                }, {
+                    "kind": "LG",
+                    "x": 0,
+                    "y": 6,
+                    "w": 3,
+                    "h": 3
+                }
+            ]
+        }, {
+            "id": "a9186904-00c8-433d-bd46-db5e5cd6bec3",
+            "name": "Cases started statistics",
+            "description": "This widget displays the cases that have been started, based on the selected time frame",
+            "config": {
+                "type": "MetricTrendConfigDto",
+                "domain": {
+                    "kind": "Workflow (Case)",
+                    "id": "*",
+                    "name": "ALL",
+                    "fields": [
+                        "*"
+                    ],
+                    "fieldValues": [
+                        "*"
+                    ]
+                },
+                "filters": [{
+                        "field": "category.keyword",
+                        "op": "Eq",
+                        "values": [
+                            "icm"
+                        ]
+                    }, {
+                        "field": "type.keyword",
+                        "op": "Eq",
+                        "values": [
+                            "case"
+                        ]
+                    }
+                ],
+                "fieldAggregation": {
+                    "field": "",
+                    "aggregation": "Count"
+                },
+                "interval": {
+                    "type": "FixedIntervalDto",
+                    "unit": "DAY",
+                    "value": 1
+                },
+                "timestampField": "start-time",
+                "settings": {
+                    "type": "TrendSettingsBarDto",
+                    "unit": "",
+                    "_version": 1
+                },
+                "predictionConfig": {
+                    "enabled": false,
+                    "_version": 1
+                }
+            },
+            "layouts": [{
+                    "kind": "SM",
+                    "x": 0,
+                    "y": 15,
+                    "w": 1,
+                    "h": 3
+                }, {
+                    "kind": "LG",
+                    "x": 1,
+                    "y": 3,
+                    "w": 2,
+                    "h": 3
+                }
+            ]
+        }, {
+            "id": "f0b9bdfc-b38d-472f-9172-d909e5b75d4b",
+            "name": "Cases completed statistics",
+            "description": "This widget displays the completed cases, based on the selected time",
+            "config": {
+                "type": "MetricTrendConfigDto",
+                "domain": {
+                    "kind": "Workflow (Case)",
+                    "id": "*",
+                    "name": "ALL",
+                    "fields": [
+                        "*"
+                    ],
+                    "fieldValues": [
+                        "*"
+                    ]
+                },
+                "filters": [{
+                        "field": "state.keyword",
+                        "op": "Eq",
+                        "values": [
+                            "Complete"
+                        ]
+                    }, {
+                        "field": "category.keyword",
+                        "op": "Eq",
+                        "values": [
+                            "icm"
+                        ]
+                    }, {
+                        "field": "type.keyword",
+                        "op": "Eq",
+                        "values": [
+                            "case"
+                        ]
+                    }
+                ],
+                "fieldAggregation": {
+                    "field": "",
+                    "aggregation": "Count"
+                },
+                "interval": {
+                    "type": "FixedIntervalDto",
+                    "unit": "DAY",
+                    "value": 1
+                },
+                "timestampField": "end-time",
+                "settings": {
+                    "type": "TrendSettingsBarDto",
+                    "unit": "",
+                    "_version": 1
+                },
+                "predictionConfig": {
+                    "enabled": false,
+                    "_version": 1
+                }
+            },
+            "layouts": [{
+                    "kind": "SM",
+                    "x": 0,
+                    "y": 18,
+                    "w": 1,
+                    "h": 3
+                }, {
+                    "kind": "LG",
+                    "x": 3,
+                    "y": 3,
+                    "w": 2,
+                    "h": 3
+                }
+            ]
+        }
+    ],
+    "timeWindow": {
+        "type": "NoTimeWindowDto"
+    },
+    "creation": "2020-12-02T15:03:40Z",
+    "lastUpdate": "2020-12-02T15:03:40Z",
+    "goalsLayout": []
+}
